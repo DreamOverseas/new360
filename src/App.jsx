@@ -33,8 +33,7 @@ import ProductDetail from "./Components/ProductDetail.jsx";
 import ProductRelatedPerson from "./Pages/ProductRelatedPerson.jsx";
 import ProductRelatedNews from "./Pages/ProductRelatedNews.jsx";
 import ProductRelatedEvent from "./Pages/ProductRelatedEvent.jsx";
-import PersonDetail from "./Pages/PersonDetail.jsx";
-
+import PersonDetail from "./Pages/PersonDetail.jsx";import SmartCardVerify from './Pages/SmartCardVerify.jsx';
 function App() {
 
   const vite_openai_api_url = import.meta.env.VITE_OPENAI_API_URL;
@@ -150,6 +149,9 @@ function App() {
           <Route path='/products/:main/:variant/related-news' element={<ProductRelatedNews />} />
           <Route path='/products/:main/related-event' element={<ProductRelatedEvent />} />
           <Route path='/products/:main/:variant/related-event' element={<ProductRelatedEvent />} />
+
+          {/* 360 Smart Card verification */}
+          <Route path='/360smartcard' element={<SmartCardVerify />} />
 
           {/* 人物详情页 */}
           <Route path='/person/:id' element={<PersonDetail />} />
